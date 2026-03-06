@@ -50,10 +50,31 @@ body {
   letter-spacing: 0.03em;
 }
 
-h1 {
-  margin: 16px 0 8px;
-  font-size: 34px;
-  line-height: 1.25;
+.brand-title {
+  margin: 14px 0 8px;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  line-height: 1;
+}
+
+.brand-main {
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, var(--primary-deep) 0%, #5a56e4 45%, #7a76f2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.8), 0 8px 20px rgba(74, 71, 216, 0.26);
+}
+
+.brand-sub {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-sub);
+  transform: translateY(-4px);
 }
 
 .subtitle {
@@ -146,8 +167,17 @@ button:hover {
     border-radius: 22px;
   }
 
-  h1 {
-    font-size: 28px;
+  .brand-title {
+    gap: 6px;
+  }
+
+  .brand-main {
+    font-size: 32px;
+  }
+
+  .brand-sub {
+    font-size: 16px;
+    transform: translateY(-2px);
   }
 
   .form-options {
