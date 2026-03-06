@@ -22,12 +22,30 @@
         </h1>
         <p class="subtitle">商品リサーチ分析ツール</p>
 
-        <form class="login-form">
-          <label for="email">メールアドレス</label>
-          <input id="email" type="email" placeholder="example@company.com" autocomplete="email" required />
+        <form id="loginForm" class="login-form">
+          <label for="loginId">ログインID</label>
+          <input
+            id="loginId"
+            class="login-input"
+            type="text"
+            placeholder="your-login-id"
+            autocomplete="username"
+            required
+          />
 
           <label for="password">パスワード</label>
-          <input id="password" type="password" placeholder="••••••••" autocomplete="current-password" required />
+          <input
+            id="password"
+            class="login-input"
+            type="password"
+            placeholder="••••••••"
+            autocomplete="current-password"
+            required
+          />
+
+          <p id="loginError" class="error-message" role="alert" aria-live="assertive" hidden>
+            有効期限が経過しています。サポートセンターへお問合せください。
+          </p>
 
           <div class="form-options">
             <label class="remember">
@@ -41,5 +59,27 @@
         </form>
       </section>
     </main>
+
+    <script>
+      const loginForm = document.getElementById("loginForm");
+      const loginIdInput = document.getElementById("loginId");
+      const passwordInput = document.getElementById("password");
+      const loginError = document.getElementById("loginError");
+
+      loginForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const isLoginIdFilled = loginIdInput.value.trim().length > 0;
+        const isPasswordFilled = passwordInput.value.trim().length > 0;
+
+        if (isLoginIdFilled && isPasswordFilled) {
+          loginError.hidden = false;
+          return;
+        }
+
+        loginError.hidden = true;
+        loginForm.reportValidity();
+      });
+    </script>
   </body>
 </html>
