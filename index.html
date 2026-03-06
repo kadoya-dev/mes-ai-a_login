@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MES-AI-A（仮） | ログイン</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="login-page">
+      <section class="login-card" aria-label="ログインフォーム">
+        <p class="badge">米Amazon輸出特化</p>
+        <h1 class="brand-title" aria-label="MES-AI-A（仮）">
+          <span class="brand-main">MES-AI-A</span>
+          <span class="brand-sub">（仮）</span>
+        </h1>
+        <p class="subtitle">商品リサーチ分析ツール</p>
+
+        <form class="login-form">
+          <label for="email">メールアドレス</label>
+          <input id="email" type="email" placeholder="example@company.com" autocomplete="email" required />
+
+          <label for="password">パスワード</label>
+          <input id="password" type="password" placeholder="••••••••" autocomplete="current-password" required />
+
+          <div class="form-options">
+            <label class="remember">
+              <input type="checkbox" />
+              ログイン状態を保持
+            </label>
+            <a href="#" aria-label="パスワード再設定">パスワードを忘れた場合</a>
+          </div>
+
+          <button type="submit">ログイン</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
