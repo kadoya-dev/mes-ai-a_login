@@ -69,7 +69,7 @@ body {
   background: linear-gradient(90deg, var(--primary-deep) 0%, var(--primary) 50%, #7572f5 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+  color: #4540e0;
   text-shadow: 0 2px 0 rgba(255, 255, 255, 0.8), 0 8px 20px rgba(69, 64, 224, 0.28);
 }
 
